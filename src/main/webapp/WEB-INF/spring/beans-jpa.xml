@@ -24,7 +24,7 @@
   <!-- EntityManagerFactory -->
   <bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
     <property name="dataSource" ref="dataSource"/>
-    <!--Поставщик данных - hibernate-->
+    <!--Поставщик данных - EclipseLink-->
     <property name="jpaVendorAdapter">
       <bean class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter">
 
