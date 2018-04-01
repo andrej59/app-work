@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+  xsi:schemaLocation="
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+  http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!--
+ <bean id="dbDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+   <property name="jndiName" value="java:comp/env/jdbc/MyLocalDB"/>
+ </bean>
+ -->
+  <!--@Transaction annotation support -->
+  <tx:annotation-driven/>
+
+  <!--Обеспечивает работу с транзакциями в Spring -->
+  <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+    <property name="entityManagerFactory" ref="emf"/>
+  </bean>
+
+  <!-- EntityManagerFactory -->
+  <bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <property name="dataSource" ref="dataSource"/>
+    <!--Поставщик данных - hibernate-->
+    <property name="jpaVendorAdapter">
+      <bean class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter">
+
+      </bean>
+    </property>
+    <!--поиск сущностей в этом пакете -->
+    <property name="packagesToScan" value="ru.ajana.work.spring.jpa.entities"/>
+    <!--
+    <property name="loadTimeWeaver">
+      <bean class="org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver"/>
+    </property>
+    -->
+    <property name="jpaPropertyMap">
+      <map>
+        <entry key="eclipselink.weaving" value="false"/>
+        <!-- кэширование работает только для тех Entity, у которых установлена аннотация Cacheable(true) -->
+        <entry key="shared-cache-mode" value="ENABLE_SELECTIVE"/>
+      </map>
+    </property>
+  </bean>
+
+
+  <!--
+  <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    <property name="url" value="jdbc:mysql://localhost:3306/TestDB"/>
+    <property name="username" value="pankaj"/>
+    <property name="password" value="pankaj123"/>
+  </bean>
+  -->
+
+  <jdbc:embedded-database id="dataSource" type="H2">
+  </jdbc:embedded-database>
+</beans>
