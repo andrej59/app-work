@@ -10,6 +10,7 @@
 
 
   <import resource="beans-jpa.xml"/>
+  <import resource="spring-security-config.xml"/>
 
   <!-- Configure to plugin JSON as request and response in method handler -->
   <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
