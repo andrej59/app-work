@@ -25,11 +25,6 @@
     class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
   </bean>
 
-
-
-
-
-
   <!-- Configuring interceptors based on URI -->
   <mvc:interceptors>
     <mvc:interceptor>
