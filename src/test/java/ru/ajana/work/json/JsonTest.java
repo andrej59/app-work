@@ -13,9 +13,6 @@ public class JsonTest {
   @Test
   public void main() {
     Dog dog = new Dog();
-    dog.name = "Falco";
-    dog.age = 4;
-    dog.bitable = false;
 
 // Create Jsonb and serialize
     Jsonb jsonb = JsonbBuilder.create();

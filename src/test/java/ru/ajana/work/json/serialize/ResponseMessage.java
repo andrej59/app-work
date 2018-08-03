@@ -1,12 +1,10 @@
 package ru.ajana.work.json.serialize;
 
-import java.io.Serializable;
-
 /**
  * @author Andrey Kharintsev on 03.08.2018
  */
-public class ResponseMessage<T> implements Serializable {
 
+public class ResponseMessage<T> {
   private String status;
   private T result;
 
