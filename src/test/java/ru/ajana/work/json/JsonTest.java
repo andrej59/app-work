@@ -1,5 +1,6 @@
 package ru.ajana.work.json;
 
+
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import org.junit.Test;
