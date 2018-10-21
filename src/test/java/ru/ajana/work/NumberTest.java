@@ -16,7 +16,6 @@ public class NumberTest {
     System.out.println(Integer.BYTES);
     System.out.println(Float.BYTES);
     System.out.println(Double.BYTES);
-    SoftReference
 //    float value1 = 102;
 //    float value2 = (int) 102.0;
 //    float value3 = 1f * 0.0;
