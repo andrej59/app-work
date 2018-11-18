@@ -21,13 +21,24 @@ public class StringTest {
       System.out.println("Собака");
     }
 
-    if(val1.equals(val2)){
+    if (val1.equals(val2)) {
       System.out.println("Лошадь");
     }
 
-    if(val1.equals(val3)){
+    if (val1.equals(val3)) {
       System.out.println("Корова");
     }
 
+  }
+
+  @Test
+  public void testHorse() {
+    StringBuilder horse1 = new StringBuilder("Лошадь");
+    StringBuilder horse2 = new StringBuilder("Лошадь");
+    if (horse1.equals(horse2)) {
+      System.out.println("Лошадь");
+    }else{
+      System.out.println("Лошадь стала коровой");
+    }
   }
 }
