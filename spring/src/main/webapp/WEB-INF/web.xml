@@ -9,7 +9,7 @@
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <!-- По умолчанию -->
-    <param-value>/WEB-INF/spring/applicationContext.xml</param-value>
+    <param-value>/src/main/webapp/WEB-INF/spring/applicationContext.xml</param-value>
   </context-param>
 
   <listener>
@@ -21,7 +21,7 @@
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>/WEB-INF/spring/dispatcher-servlet.xml</param-value>
+      <param-value>/src/main/webapp/WEB-INF/spring/dispatcher-servlet.xml</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
@@ -49,7 +49,7 @@
   <!-- error page -->
   <error-page>
     <error-code>403</error-code>
-    <location>/accessDenied.jsp</location>
+    <location>/src/main/webapp/accessDenied.jspaccessDenied.jsp</location>
   </error-page>
 
 </web-app>

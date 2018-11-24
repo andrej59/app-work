@@ -2,7 +2,6 @@ package ru.ajana.work.spring.jpa.entities;
 
 import java.util.Collection;
 import javax.persistence.Basic;
-import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
@@ -12,14 +11,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedAttributeNode;
 import javax.persistence.NamedEntityGraph;
 import javax.persistence.OneToOne;
-import ru.ajana.work.spring.jpa.convet.BooleanToIntegerConverter;
 
 /**
  * @author Andrey Kharintsev on 31.03.2018
  */
 @NamedEntityGraph(
 
-    attributeNodes = { @NamedAttributeNode("projects")}
+    attributeNodes = {@NamedAttributeNode("projects")}
 )
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
