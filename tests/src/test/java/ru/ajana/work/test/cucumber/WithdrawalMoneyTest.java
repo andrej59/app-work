@@ -2,11 +2,7 @@ package ru.ajana.work.test.cucumber;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
-import cucumber.api.TypeRegistry;
-import cucumber.api.TypeRegistryConfigurer;
 import cucumber.api.junit.Cucumber;
-import io.cucumber.cucumberexpressions.ParameterType;
-import java.util.Locale;
 import org.junit.runner.RunWith;
 
 /**
@@ -25,5 +21,6 @@ import org.junit.runner.RunWith;
     plugin = {"pretty", "html:target/cucumber", "junit:target/junit-report.xml"}
     //name = "^Успешное|Успешная.*" // фильтр тестов по имени
 )
-public class WithdrawalMoneyTest  {
+public class WithdrawalMoneyTest {
+
 }
