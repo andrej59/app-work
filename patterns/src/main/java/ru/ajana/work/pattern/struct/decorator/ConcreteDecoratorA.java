@@ -1,7 +1,7 @@
 package ru.ajana.work.pattern.struct.decorator;
 
 /**
- * Конкретный декоратор.
+ * Конкретный декоратор A.
  *
  * @author Andrey Kharintsev on 20.11.2018
  */

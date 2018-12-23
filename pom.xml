@@ -11,6 +11,7 @@
     <module>patterns</module>
     <module>tests</module>
     <module>spring</module>
+    <module>task</module>
   </modules>
 
   <packaging>pom</packaging>
