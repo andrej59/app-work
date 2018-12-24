@@ -4,10 +4,8 @@ import static java.lang.System.out;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Дан текст T и строка S. Требуется найти подстроку S' в T такую, что она совпадает с S с точностью
@@ -54,33 +52,28 @@ public class SearchPermutation {
       list.add(input);
       return list;
     }
-    // Строим карту отрезков скользящим окном по input длиной substr
-    Map<String, Integer> cutMap = new HashMap<>();
+    // Вычисляем hash символов подстроки
+    int hash = getHashCodeList3(substr.toCharArray());
+
+    // Находим все подстроки, которые подходят по условие
     int size = input.length();
     int len = substr.length();
-
+    // Нарезаем отрезки скользящим деревом
     for (int i = 0, end = i + len; end < size; i++) {
       end = i + len;
       String cut = input.substring(i, end);
       int hashCut = getHashCodeList3(cut.toCharArray());
-      cutMap.put(cut, hashCut);
-    }
-
-    // Находим все подстроки, которые подходят по условие
-    int hash = getHashCodeList3(substr.toCharArray());
-    cutMap.forEach((k, v) -> {
-      if (v == hash) {
-        list.add(k);
+      if (hashCut == hash) {
+        list.add(cut);
       }
-    });
-
+    }
     return list;
   }
 
 
   /**
    * Возвращает hash списка строк. Недостатком этого является то, что хеш для {"x", "x"} такой же,
-   * как хеш для {"y", "y"}
+   * как хеш для {"y", "y"}. Не подошел, слишком большая коллизия.
    */
   public static int getHashCodeList1(char[] substr) {
     int hash = 0;
@@ -96,7 +89,7 @@ public class SearchPermutation {
 
   /**
    * Возвращает hash списка строк. Есть проблемы для {1, -1} и {2, -2}, но если используются строки
-   * это не проблема.
+   * это не проблема. Не подошёл слишком большая коллизия.
    */
   public static int getHashCodeList2(char[] substr) {
     int hash = 0;
@@ -111,7 +104,7 @@ public class SearchPermutation {
 
   /**
    * Получаем hash для каждого элемента, затем сортируем список hash значений. Возвращает hash
-   * списка строк.
+   * списка символов независимый от перестановок.
    */
   public static int getHashCodeList3(char[] substr) {
     int hash = 0;
