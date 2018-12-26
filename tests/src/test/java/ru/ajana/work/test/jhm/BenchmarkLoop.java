@@ -25,7 +25,7 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Benchmark)
-@Fork(value = 2, jvmArgs = {"-Xms2G", "-Xmx2G"})
+@Fork(value = 2, jvmArgs = {"-Xms1G", "-Xmx1G"})
 //@Warmup(iterations = 3)
 //@Measurement(iterations = 8)
 public class BenchmarkLoop {
