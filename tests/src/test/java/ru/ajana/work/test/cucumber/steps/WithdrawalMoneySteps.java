@@ -3,14 +3,14 @@ package ru.ajana.work.test.cucumber.steps;
 import cucumber.api.java.ru.Дано;
 import cucumber.api.java.ru.Когда;
 import cucumber.api.java.ru.Тогда;
-import lombok.extern.slf4j.Slf4j;
+
 
 /**
  * Шаги сценария снятия денег.
  *
  * @author Andrey Kharintsev on 25.11.2018
  */
-@Slf4j
+
 public class WithdrawalMoneySteps {
 
   @Дано("на счете пользователя имеется ([0-9]++) рублей")
