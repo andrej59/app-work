@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>app-work</artifactId>
+    <groupId>ru.ajana.work</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>deployer</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jaxb2-maven-plugin</artifactId>
+        <version>${jaxb2-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>deployer</id>
+            <goals>
+              <goal>xjc</goal>
+            </goals>
+            <configuration>
+              <target>2.1</target>
+              <outputDirectory>${project.build.directory}/generated-sources</outputDirectory>
+              <sources>
+                <source>
+                  ${basedir}/src/main/resources/xsd/maven-4.0.0.xsd
+                </source>
+              </sources>
+              <xjbSources>
+                <xjbSource>${basedir}/src/main/xjb</xjbSource>
+              </xjbSources>
+              <extension>true</extension>
+              <clearOutputDir>false</clearOutputDir>
+              <verbose>false</verbose>
+              <locale>ru</locale>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
