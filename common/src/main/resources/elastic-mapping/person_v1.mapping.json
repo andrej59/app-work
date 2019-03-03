@@ -1,0 +1,61 @@
+{
+  "mappings": {
+    "person": {
+      "properties": {
+        "id":{
+          "type": "long"
+        },
+        "lastname": {
+          "type": "spring",
+          "alias": "lastName"
+        },
+        "firstname": {
+          "type": "spring",
+          "index_name": "firstName"
+        },
+        "middlename": {
+          "type": "spring",
+          "index_name": "middleName"
+        },
+        "birthdate": {
+          "type": "date",
+          "index_name": "birthDate"
+        },
+        "death_date": {
+          "type": "date",
+          "index_name": "deathDate"
+        },
+        "country_name": {
+          "type": "string",
+          "index_name": "countryName"
+        },
+        "country_short_name": {
+          "type": "string",
+          "index_name": "countryShortName"
+        },
+        "sex_code": {
+          "type": "string",
+          "index_name": "sexCode"
+        },
+        "sex_name": {
+          "type": "string",
+          "index_name": "sexName"
+        },
+        "snils": {
+          "type": "string"
+        },
+        "inn": {
+          "type": "string"
+        },
+        "ident_doc_type_code": {
+          "type": "text",
+          "index_name": "identDocTypeCode"
+        },
+        "ident_doc_type_name": {
+          "type": "text",
+          "index_name": "identDocTypeCode"
+        }
+      }
+    }
+  }
+}

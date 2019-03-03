@@ -32,15 +32,15 @@
   </servlet-mapping>
 
   <!-- Need to enable xml config Spring Security -->
-  <filter>
-    <filter-name>springSecurityFilterChain</filter-name>
-    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-  </filter>
+  <filterValues>
+    <filterValues-name>springSecurityFilterChain</filterValues-name>
+    <filterValues-class>org.springframework.web.filterValues.DelegatingFilterProxy</filterValues-class>
+  </filterValues>
 
-  <filter-mapping>
-    <filter-name>springSecurityFilterChain</filter-name>
+  <filterValues-mapping>
+    <filterValues-name>springSecurityFilterChain</filterValues-name>
     <url-pattern>/*</url-pattern>
-  </filter-mapping>
+  </filterValues-mapping>
 
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

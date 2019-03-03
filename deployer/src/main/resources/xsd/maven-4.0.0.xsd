@@ -1236,11 +1236,11 @@
       <xs:element minOccurs="0" name="filters">
         <xs:annotation>
           <xs:documentation source="version">4.0.0+</xs:documentation>
-          <xs:documentation source="description">The list of filter properties files that are used when filtering is enabled.</xs:documentation>
+          <xs:documentation source="description">The list of filterValues properties files that are used when filtering is enabled.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="filter" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+            <xs:element name="filterValues" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -2221,11 +2221,11 @@
       <xs:element minOccurs="0" name="filters">
         <xs:annotation>
           <xs:documentation source="version">4.0.0+</xs:documentation>
-          <xs:documentation source="description">The list of filter properties files that are used when filtering is enabled.</xs:documentation>
+          <xs:documentation source="description">The list of filterValues properties files that are used when filtering is enabled.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="filter" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+            <xs:element name="filterValues" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
