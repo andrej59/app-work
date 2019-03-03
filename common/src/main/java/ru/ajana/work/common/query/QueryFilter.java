@@ -1,5 +1,6 @@
 package ru.ajana.work.common.query;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,8 +9,48 @@ import java.util.Map;
  */
 public class QueryFilter {
 
+  /**
+   * Знак равно.
+   */
+  private static final String EQ = "=";
+  /**
+   * Знак больше.
+   */
+  private static final String QT = ">";
+  /**
+   * Знак больше или равно.
+   */
+  private static final String QE = ">=";
+  /**
+   * Знак меньше.
+   */
+  private static final String LT = "<";
+  /**
+   * Знак меньше или равно.
+   */
+  private static final String LE = "<=";
+
+
   private String filter;
+  public String filterValue;
   private Map<String, Object> filterValues = new HashMap<>();
+
+
+  public QueryFilter() {
+  }
+
+  public QueryFilter(String filter, String filterValue) {
+    this.filter = filter;
+    String[] arr = filterValue.split("&");
+    Arrays.stream(arr).forEach(exp -> {
+      String[] val = exp.split("([=])|([>])|([<])|(>=)|(<=)");
+      if (val != null && val.length == 2) {
+        filterValues.put(val[0], val[1]);
+      }
+    });
+    this.filterValue = filterValue;
+  }
+
   /**
    * Размер страницы  результата.
    */
