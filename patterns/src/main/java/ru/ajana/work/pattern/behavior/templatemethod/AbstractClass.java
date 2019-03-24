@@ -15,7 +15,7 @@ public abstract class AbstractClass {
   /**
    * Замещающий абстрактный метод.
    */
-  protected void subMethod() {
+  protected  void subMethod() {
     System.out.println("Init subMethod default");
   }
 }
