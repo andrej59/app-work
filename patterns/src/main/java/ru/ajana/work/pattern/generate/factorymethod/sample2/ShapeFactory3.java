@@ -3,15 +3,15 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Polymorphic factory methods
-package ru.ajana.work.pattern.generate.factorymethod.sample;
+package ru.ajana.work.pattern.generate.factorymethod.sample2;
 
 import java.util.Random;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.Circle;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.Shape;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.Square;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.Triangle;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.Circle;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.Shape;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.Square;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.Triangle;
 
 
 interface PolymorphicFactory {

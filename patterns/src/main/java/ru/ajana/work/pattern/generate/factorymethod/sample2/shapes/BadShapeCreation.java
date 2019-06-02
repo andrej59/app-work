@@ -1,4 +1,4 @@
-package ru.ajana.work.pattern.generate.factorymethod.sample.shapes;
+package ru.ajana.work.pattern.generate.factorymethod.sample2.shapes;
 // patterns/shapes/BadShapeCreation.java
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.

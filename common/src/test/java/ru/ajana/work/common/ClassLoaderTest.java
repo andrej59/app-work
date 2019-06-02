@@ -27,7 +27,7 @@ public class ClassLoaderTest {
     Class<?> clazz2 = jarClassLoader.loadClass("BlackBox");
     System.out.println("clazz1: " + clazz1);
     System.out.println("clazz2: " + clazz2);
-    //IJarSample sample = (IJarSample) clazz.newInstance();
-    //sample.demo("Test");
+    //IJarSample sample2 = (IJarSample) clazz.newInstance();
+    //sample2.demo("Test");
   }
 }

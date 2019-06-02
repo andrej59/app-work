@@ -2,16 +2,16 @@
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-package ru.ajana.work.pattern.generate.factorymethod.sample;
+package ru.ajana.work.pattern.generate.factorymethod.sample2;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.BadShapeCreation;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.FactoryMethod;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.FactoryTest;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.Shape;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.BadShapeCreation;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.FactoryMethod;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.FactoryTest;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.Shape;
 
 public class ShapeFactory2 implements FactoryMethod {
 
@@ -20,7 +20,7 @@ public class ShapeFactory2 implements FactoryMethod {
   public static Constructor load(String id) {
     System.out.println("loading " + id);
     try {
-      return Class.forName("ru.ajana.work.pattern.generate.factorymethod.sample.shapes." + id)
+      return Class.forName("ru.ajana.work.pattern.generate.factorymethod.sample2.shapes." + id)
           .getConstructor();
     } catch (ClassNotFoundException |
         NoSuchMethodException e) {

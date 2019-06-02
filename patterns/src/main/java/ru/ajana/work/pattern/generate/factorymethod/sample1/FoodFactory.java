@@ -1,4 +1,4 @@
-package ru.ajana.work.pattern.generate.factorymethod.sample.food;
+package ru.ajana.work.pattern.generate.factorymethod.sample1;
 
 /**
  * Фабрика еды.

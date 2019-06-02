@@ -4,15 +4,15 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // A simple static factory method
-package ru.ajana.work.pattern.generate.factorymethod.sample;
+package ru.ajana.work.pattern.generate.factorymethod.sample2;
 
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.BadShapeCreation;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.Circle;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.FactoryMethod;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.FactoryTest;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.Shape;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.Square;
-import ru.ajana.work.pattern.generate.factorymethod.sample.shapes.Triangle;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.BadShapeCreation;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.Circle;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.FactoryMethod;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.FactoryTest;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.Shape;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.Square;
+import ru.ajana.work.pattern.generate.factorymethod.sample2.shapes.Triangle;
 
 public class ShapeFactory1 implements FactoryMethod {
 
