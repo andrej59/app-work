@@ -1,0 +1,23 @@
+package ru.ajana.work.common.test;
+
+/**
+ * @author Andrey Kharintsev on 24.06.2019
+ */
+public class Operators {
+
+  public static int operators() {
+    int x1 = -4;
+    int x2 =  x1--;
+    int x3 = ++x2; // !!!-3
+    if (x2 > x3) {
+      --x3;
+    } else {
+      x1++;
+    }
+    return x1 + x2 + x3;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(operators());
+  }
+}
