@@ -13,7 +13,6 @@ public abstract class Decorator implements AppComponent {
     this.component = component;
   }
 
-
   @Override
   public void operation() {
     component.operation();
