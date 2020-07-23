@@ -25,13 +25,13 @@ class Student {
 public class Sample4 {
 
   public static void main(String[] args) {
-    List<Student> slist = List
-        .of(new Student("S1", 40),
-            new Student("S2", 35),
-            new Student("S3", 30));
-    Consumer<Student> increaseMarks = s -> s.addMarks(10);
-    slist.forEach(increaseMarks);
-    slist.forEach(Student::debug);
+//    List<Student> slist = List
+//        .of(new Student("S1", 40),
+//            new Student("S2", 35),
+//            new Student("S3", 30));
+//    Consumer<Student> increaseMarks = s -> s.addMarks(10);
+//    slist.forEach(increaseMarks);
+//    slist.forEach(Student::debug);
   }
 }
 

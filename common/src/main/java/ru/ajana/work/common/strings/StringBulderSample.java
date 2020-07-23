@@ -9,7 +9,5 @@ public class StringBulderSample {
     StringBuilder sb = new StringBuilder();
     String str = sb.append("abcd").insert(2, "asdf").substring(0, 4);
     System.out.println(str);
-
-
   }
 }
