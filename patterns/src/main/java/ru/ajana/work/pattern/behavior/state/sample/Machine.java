@@ -24,5 +24,4 @@ public class Machine {
   public void off() {
     current.off(this);
   }
-
 }

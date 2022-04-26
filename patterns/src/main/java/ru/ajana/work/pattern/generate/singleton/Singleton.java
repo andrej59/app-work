@@ -7,17 +7,17 @@ package ru.ajana.work.pattern.generate.singleton;
  */
 public class Singleton {
 
-  private static Singleton instance = new Singleton();
-  private String data = "Singleton data";
+    private static final Singleton INSTANCE = new Singleton();
+    private              String    data     = "Singleton data";
 
-  private Singleton() {
-  }
+    private Singleton() {
+    }
 
-  public static Singleton getInstance() {
-    return instance;
-  }
+    public static Singleton getInstance() {
+        return INSTANCE;
+    }
 
-  public void operation() {
-    System.out.println(data);
-  }
+    public void operation() {
+        System.out.println(data);
+    }
 }

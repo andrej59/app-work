@@ -6,6 +6,7 @@ package ru.ajana.work.pattern.struct.bridge.sample;
  * @author Andrey Kharintsev on 28.04.2019
  */
 public class FileLogger extends Logger {
+
     private String file;
 
     public FileLogger(String file) {

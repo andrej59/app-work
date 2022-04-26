@@ -5,24 +5,45 @@ package ru.ajana.work.common.enums;
  *
  * @author Andrey Kharintsev on 24.11.2018
  */
-public enum SeasonEnum {
-  WINTER {
-    public void printHours() {
-      System.out.println("9am-3pm");
-    }
-  }, SPRING {
-    public void printHours() {
-      System.out.println("9am-5pm");
-    }
-  }, SUMMER {
-    public void printHours() {
-      System.out.println("9am-7pm");
-    }
-  }, FALL {
-    public void printHours() {
-      System.out.println("9am-5pm");
-    }
-  };
+public enum SeasonEnum implements InterfaceEnum {
+    WINTER {
+        @Override
+        public Enum getEnum() {
+            return this;
+        }
+        @Override
+        public void printHours() {
+            System.out.println("9am-3pm");
+        }
+    }, SPRING {
+        @Override
+        public Enum getEnum() {
+            return SeasonEnum.SPRING;
+        }
 
-  public abstract void printHours();
+        @Override
+        public void printHours() {
+            System.out.println("9am-5pm");
+        }
+    }, SUMMER {
+        @Override
+        public Enum getEnum() {
+            return null;
+        }
+        @Override
+        public void printHours() {
+            System.out.println("9am-7pm");
+        }
+    }, FALL {
+        @Override
+        public Enum getEnum() {
+            return null;
+        }
+
+        public void printHours() {
+            System.out.println("9am-5pm");
+        }
+    };
+
+    public abstract void printHours();
 }

@@ -17,7 +17,7 @@
   </properties>
 
   <dependencies>
-    <!-- JHM -->
+    <!-- JHM
     <dependency>
       <groupId>org.openjdk.jmh</groupId>
       <artifactId>jmh-core</artifactId>
@@ -27,6 +27,7 @@
       <groupId>org.openjdk.jmh</groupId>
       <artifactId>jmh-generator-annprocess</artifactId>
     </dependency>
+    -->
 
     <!-- LOMBOK -->
     <dependency>
@@ -123,11 +124,13 @@
       <version>${jackson.version}</version>
       <scope>test</scope>
     </dependency>
+    <!--
     <dependency>
       <groupId>org.openjdk.jmh</groupId>
       <artifactId>jmh-core</artifactId>
       <version>RELEASE</version>
       <scope>test</scope>
     </dependency>
+    -->
   </dependencies>
 </project>
