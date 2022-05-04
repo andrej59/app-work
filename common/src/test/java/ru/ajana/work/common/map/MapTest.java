@@ -33,6 +33,15 @@ public class MapTest {
 
   @Test
   public void testTreeSet() {
-    Set<CustomUser> set = new TreeSet<>(Comparator.comparing(u -> u.getId()));
+    CustomUser user = new CustomUser(1, "user1", LocalDateTime.now());
+
+    System.out.println(System.identityHashCode(user));
+    System.out.println(user.hashCode());
+    Set<String> set = new TreeSet<>();
+
+    set.add(new String("test1"));
+    set.add(new String("test1"));
+
+    System.out.println(set);
   }
 }
